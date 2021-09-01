@@ -1,0 +1,44 @@
+.upload-movie-body {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--red);
+    border-radius: 8px;
+
+    button {
+        border-radius: 8px;
+        background: var(--red);
+        margin: 10px 15px;
+        width: 100px;
+        height: 40px;
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            background: var(--white);
+            color: #000011;
+            transition: .5s;
+        }
+
+        &:disabled {
+            background: grey;
+            color: #000011;
+            cursor: default;
+        }
+    }
+}
+
+.upload-movie-body-active {
+    visibility: visible;
+}
+
+.upload-movie-body-inactive {
+    visibility: hidden;
+}

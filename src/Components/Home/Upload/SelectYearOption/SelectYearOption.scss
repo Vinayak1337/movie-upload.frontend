@@ -1,0 +1,18 @@
+.select-year-option {
+    padding: 12px;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--lightred);
+    }
+
+    label {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .select-option-radio {
+        display: none;
+    }
+}

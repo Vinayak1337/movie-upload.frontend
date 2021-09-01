@@ -1,3 +1,21 @@
+:root {
+	--black: #353531;
+	--white: #e8e9eb;
+  --red: #EC4E20;
+  --lightred: #EA9C86;
+  --lightblack: #626260;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +23,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--black);
 }
 
 code {

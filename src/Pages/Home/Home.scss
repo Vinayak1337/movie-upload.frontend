@@ -1,0 +1,14 @@
+.main-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+
+    .main-page-items {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}

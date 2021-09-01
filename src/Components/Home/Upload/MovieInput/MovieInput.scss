@@ -1,0 +1,55 @@
+.movie-input-body {
+    margin: 15px 10px;
+    padding: 0px;
+
+    .movie-input-container {
+        border-bottom: 2px solid grey;
+        position: relative;
+
+        input {
+            position: relative;
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            color: var(--white);
+        }
+        
+        label {
+            position: absolute;
+            top: 50%;
+            left: 3%;
+            color: grey;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: top .5s;
+        }
+        
+        span::before {
+            content: '';
+            position: absolute;
+            top: 41px;
+            left: 0%;
+            transform: translateY(-50%);
+            width: 0px;
+            height: 2px;
+            background: var(--red);
+            transition: 0.5s;
+        }
+        
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -5px;
+            color: var(--red);
+        }
+        
+        input:focus ~ span::before,
+        input:valid ~ span::before {
+            width: 100%;
+        }
+    }
+}

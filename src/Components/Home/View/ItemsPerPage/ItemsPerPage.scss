@@ -1,0 +1,25 @@
+.items-per-page-body {
+    display: flex;
+    align-items: center;
+
+    .ipp-label {
+        color: grey;
+        font-weight: 600;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    #items-per-page-select {
+        background: none;
+        border: none;
+        color: var(--white);
+        outline: none;
+        font-size: 16px;
+        font-weight: 600;
+
+        option {
+            color: var(--white);
+            background: var(--black);
+        }
+    }
+}

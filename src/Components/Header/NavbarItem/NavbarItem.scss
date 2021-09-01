@@ -1,0 +1,48 @@
+.navbar-item {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin-right: 5px;
+        color: var(--white);
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    span {
+        position: relative;
+        margin-top: 5px;
+        top: -32%;
+        content: '';
+        height: 2px;
+        transition: .5s;
+        left: 210%;
+        transform: translate(-50%, 0);
+    }
+
+    .active-text {
+        color: var(--red);
+        transition: .5s;
+    }
+
+    .active-upload {
+        left: 50%;
+        background: var(--red);
+        transition: .5s;
+    }
+
+    .active-view {
+        left: 50%;
+        background: var(--red);
+    }
+
+    .inactive-upload {
+        left: 210%;
+        background: transparent;
+    }
+
+    .inactive-view {
+        left: -130%;
+        background: transparent;
+    }
+}

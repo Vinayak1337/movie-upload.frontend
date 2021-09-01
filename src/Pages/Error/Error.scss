@@ -1,0 +1,18 @@
+.error-page {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--red);
+
+	p {
+		font-weight: 600;
+
+		span {
+			content: '';
+			border-right: 1px solid var(--red);
+			padding: 0.5em 0px;
+			margin: 0px 10px;
+		}
+	}
+}

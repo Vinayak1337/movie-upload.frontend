@@ -1,0 +1,99 @@
+.view-movie-body {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--red);
+    background: var(--black);
+    height: 600px;
+    min-width: 550px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .view-movie-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+
+        .loading-icon {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 50px;
+            width: 50px;
+            animation: loading-keyframe infinite 5s linear;
+        }
+
+        @keyframes loading-keyframe {
+            from {
+                transform: rotate(0deg);
+            }
+          
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .view-movie-pagination {
+        border-top: 2px solid var(--red);
+        padding: 10px;
+        position: relative;
+        z-index: 5;
+    }
+
+}
+
+.view-movie-player {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.507);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    video {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 520px;
+        width: 520px;
+    }
+
+    .close-player-icon {
+        position: relative;
+        top: -60%;
+        left: -40%;
+        transform: translate(50%, 50%);
+        z-index: 15;
+        height: 30px;
+        width: 30px;
+        background: grey;
+        border-radius: 100%;
+        transition: 0.5s;
+        visibility: hidden;
+        cursor: pointer;
+
+        &:hover {
+            top: -55%;
+            visibility: visible;
+        }
+    }
+
+    video:hover ~ .close-player-icon {
+        top: -55%;
+        visibility: visible;
+    }
+}
+
+.view-movie-body-active {
+    visibility: visible;
+}
+
+.view-movie-body-inactive {
+    visibility: hidden;
+}

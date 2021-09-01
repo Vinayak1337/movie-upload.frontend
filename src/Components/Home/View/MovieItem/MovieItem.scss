@@ -1,0 +1,89 @@
+.movie-item-body {
+    border-bottom: 1px solid var(--red);
+    width: 100%;
+
+    // &:last-child {
+    //     border-bottom: none;
+    // }
+
+    .movie-item-container {
+        display: flex;
+
+        .movie-item-thumbnail {
+            padding: 10px;
+
+            img {
+                cursor: pointer;
+                height: 68px;
+                width: 120px;
+            }
+        }
+
+        .movie-item-info {
+            margin-left: 10px;
+            // border-left: 1px solid var(--red);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .movie-item-info-1 {
+                padding: 10px 0px;
+                display: flex;
+                flex-direction: column;
+
+                .movie-item-name {
+                    color: var(--white);
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .uploaded-at {
+                    color: grey;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+            }
+
+            .movie-item-info-2 {
+                border-left: 1px solid var(--red);
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .movie-item-info-container {
+                    display: flex;
+                    
+                    .label {
+                        color: grey;
+                        font-weight: 600;
+                    }
+                    .value {
+                        margin-left: 5px;
+                        color: var(--white);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 2%, 50%);
+    }
+  
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+}
