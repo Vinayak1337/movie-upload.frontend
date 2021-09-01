@@ -57,7 +57,8 @@ const ViewMovies: FC<ViewMoviesProps> = ({ isActive }) => {
                         state.isLoading ? 
                         <LoadingIcon className="loading-icon" />
                         :
-                        state.movies.map((movie, index) => (<MovieItem key={`movie-item-${index}`} movie={movie} handleClick={handleVideoPlayer} />))
+                        state.movies.length ? state.movies.map((movie, index) => (<MovieItem key={`movie-item-${index}`} movie={movie} handleClick={handleVideoPlayer} />)) :
+                        <p style={{ fontSize: "18px", fontWeight: "bold", color: "var(--white)", position: "relative", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>Upload movie from "Upload Movies tab"</p>
                     }
             </div>
             <div className="view-movie-pagination">
