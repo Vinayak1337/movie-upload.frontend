@@ -38,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -62,5 +64,17 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/redux-logger": "^3.0.9",
     "redux-logger": "^3.0.6"
-  }
+  },
+  "description": "A sample project pwa for intern.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinayak1337/sample-prj-possibillion.git"
+  },
+  "author": "vinayak1337",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinayak1337/sample-prj-possibillion/issues"
+  },
+  "homepage": "https://possibillion-sample-prj.netlify.app"
 }

@@ -41,7 +41,7 @@ const UploadMovie: FC<UploadMovieProps> = ({ isActive }) => {
     const { movieName, movieYear, movieLanguage, movieThumbnail, movieVideo } = state;
 
     useEffect(() => {
-        if ((!(movieThumbnail || movieVideo) || movieYear.includes(' ') || !(movieName.length > 2) || !(movieLanguage.length > 1))) dispatch({
+        if ((!movieThumbnail || !movieVideo || movieYear.includes(' ') || !(movieName.length > 2) || !((movieLanguage.length > 1) || movieLanguage.length < 10))) dispatch({
             type: SET_IS_VALID,
             payload: false,
         })

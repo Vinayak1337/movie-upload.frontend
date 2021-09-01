@@ -65,10 +65,10 @@
     }
 
     .close-player-icon {
-        position: relative;
-        top: -60%;
-        left: -40%;
-        transform: translate(50%, 50%);
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 15;
         height: 30px;
         width: 30px;
@@ -79,13 +79,13 @@
         cursor: pointer;
 
         &:hover {
-            top: -55%;
+            top: 40%;
             visibility: visible;
         }
     }
 
     video:hover ~ .close-player-icon {
-        top: -55%;
+        top: 40%;
         visibility: visible;
     }
 }
